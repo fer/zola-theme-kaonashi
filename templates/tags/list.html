@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_class %}main--section{% endblock %}
+
+{% block content %}
+  {% set title = taxonomy.name | capitalize %}
+  {% set count = terms | length %}
+  {% include "partials/section-header.html" %}
+
+  <ul class="tags__cloud">
+    {% for term in terms | sort(attribute="page_count") | reverse %}
+    <li class="tags__cloud-item">
+      <a class="tag" href="{{ term.permalink }}">{{ term.name }}&nbsp;<span class="tags__cloud-count">({{ term.pages | length }})</span></a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

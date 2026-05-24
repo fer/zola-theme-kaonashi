@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "macros/post.html" as post %}
+
+{% block main_class %}main--section{% endblock %}
+
+{% block content %}
+  {% set title = "Archive" %}
+  {% include "partials/section-header.html" %}
+
+  {% set posts_section = get_section(path='posts/_index.md') %}
+  {% set posts = posts_section.pages %}
+  {% set_global current_year = "" %}
+  {% for page in posts %}
+    {% set y = page.date | date(format="%Y") %}
+    {% if y != current_year %}
+      {% if current_year != "" %}</ul>{% endif %}
+      {% set_global current_year = y %}
+      <h3 class="archive__year">{{ y }}</h3>
+      <ul class="post__list">
+    {% endif %}
+    {{ post::list_item(page=page) }}
+    {% if loop.last %}</ul>{% endif %}
+  {% endfor %}
+{% endblock %}

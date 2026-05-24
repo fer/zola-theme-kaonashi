@@ -1,0 +1,17 @@
+{% import "macros/tags.html" as tags %}
+
+{% macro list_item(page, bg_position="center") %}
+{% set splash = get_url(path="images/screenshot-hello-world.png") %}
+<li class="post__list-item{% if page.extra.pinned %} post__list-item--pinned{% endif %}">
+  <a class="post__list-item-link has-bg" href="{{ page.permalink }}" style="background-image: url('{{ splash }}'); background-position: {{ bg_position }};">
+    {% if page.date %}
+      <span class="post__list-item-date">[{{ page.date | date(format="%Y-%m-%d") }}]</span>
+    {% endif %}
+    <span class="post__list-item-title">{{ page.title }}</span>
+    {% if page.extra.pinned %}
+      <span class="pinned-badge">♥</span>
+    {% endif %}
+    {{ tags::render(page=page, wrapper_class="post__list-item-tags", link=false) }}
+  </a>
+</li>
+{% endmacro list_item %}

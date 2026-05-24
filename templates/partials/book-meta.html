@@ -1,0 +1,48 @@
+{% if has_book_meta %}
+<aside class="book-meta">
+  {% if page.extra.splash %}
+    <div class="book-meta__cover">
+      <img src="{{ config.base_url }}{{ page.extra.splash }}" alt="{{ page.title }} cover" loading="lazy">
+    </div>
+  {% endif %}
+  {% if page.extra.author %}
+    <div class="book-meta__item">
+      <span class="book-meta__label">Author</span>
+      <span class="book-meta__value">{{ page.extra.author }}</span>
+    </div>
+  {% endif %}
+  {% if page.extra.publisher %}
+    <div class="book-meta__item">
+      <span class="book-meta__label">Publisher</span>
+      <span class="book-meta__value">{{ page.extra.publisher }}</span>
+    </div>
+  {% endif %}
+  {% if page.extra.year %}
+    <div class="book-meta__item">
+      <span class="book-meta__label">Year</span>
+      <span class="book-meta__value">{{ page.extra.year }}</span>
+    </div>
+  {% endif %}
+  {% if page.extra.isbn %}
+    <div class="book-meta__item">
+      <span class="book-meta__label">ISBN</span>
+      <span class="book-meta__value">{{ page.extra.isbn }}</span>
+    </div>
+  {% endif %}
+  {% if page.extra.rating %}
+    <div class="book-meta__item">
+      <span class="book-meta__label">Rating</span>
+      <span class="book-meta__value book-meta__stars">
+        {% for i in range(end=page.extra.rating) %}★{% endfor %}
+        {% for i in range(end=5 - page.extra.rating) %}☆{% endfor %}
+      </span>
+    </div>
+  {% endif %}
+  {% if page.extra.url %}
+    <div class="book-meta__item">
+      <span class="book-meta__label">Link</span>
+      <a class="book-meta__value" href="{{ page.extra.url }}">{{ page.extra.url }}</a>
+    </div>
+  {% endif %}
+</aside>
+{% endif %}

@@ -1,0 +1,9 @@
+{% set q = question | default(value=summary | default(value="")) %}
+{% if wrapper | default(value=false) %}<div class="faq">{% endif %}
+<details class="faq__item">
+  <summary class="faq__question">{{ q }}</summary>
+  <div class="faq__answer">
+{{ body | markdown | safe }}
+  </div>
+</details>
+{% if wrapper | default(value=false) %}</div>{% endif %}

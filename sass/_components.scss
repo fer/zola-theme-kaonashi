@@ -1,0 +1,23 @@
+.breadcrumbs {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.breadcrumbs a {
+  color: inherit;
+}
+
+.breadcrumbs a:hover {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.breadcrumbs__current {
+  opacity: 0.6;
+}

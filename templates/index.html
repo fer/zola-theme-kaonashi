@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% import "macros/post.html" as post %}
+{% import "macros/project.html" as projects %}
+
+{% block main_class %}main--section{% endblock %}
+
+{% block content %}
+  <section class="hero-content">
+    {{ section.content | safe }}
+  </section>
+
+  {% set show_posts = section.extra.show_posts | default(value=config.extra.show_posts | default(value=false)) %}
+  {% if show_posts %}
+    {% set posts_section = get_section(path="posts/_index.md") %}
+    {% if posts_section.pages | length > 0 %}
+      <section class="posts-overview">
+        <h3>Recent posts <span class="section__count">({{ posts_section.pages | length }})</span></h3>
+        {% set bg_positions = ["10% 70%", "80% 15%", "45% 90%", "5% 30%", "70% 60%"] %}
+        <ul class="post__list">
+          {% set_global post_count = 0 %}
+          {% for p in posts_section.pages %}
+            {% if post_count < 5 and p.extra.pinned %}
+              {% set_global post_count = post_count + 1 %}
+              {{ post::list_item(page=p, bg_position=bg_positions | nth(n=post_count - 1)) }}
+            {% endif %}
+          {% endfor %}
+          {% for p in posts_section.pages %}
+            {% if post_count < 5 and not p.extra.pinned %}
+              {% set_global post_count = post_count + 1 %}
+              {{ post::list_item(page=p, bg_position=bg_positions | nth(n=post_count - 1)) }}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+  {% endif %}
+
+  {% set show_projects = section.extra.show_projects | default(value=config.extra.show_projects | default(value=false)) %}
+  {% if show_projects %}
+    {% set projects_section = get_section(path="projects/_index.md") %}
+    {% if projects_section.pages | length > 0 %}
+      <section class="projects-overview">
+        <h3>Projects <span class="section__count">({{ projects_section.pages | length }})</span></h3>
+        <ul class="project__grid">
+          {% for proj in projects_section.pages %}
+            {% if proj.extra.pinned %}
+              {{ projects::project_card(page=proj, pinned=true) }}
+            {% else %}
+              {{ projects::project_card(page=proj) }}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+  {% endif %}
+{% endblock %}

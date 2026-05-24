@@ -1,0 +1,33 @@
+{% if page.toc and (page.extra.show_toc | default(value=true)) %}
+<aside class="page__toc">
+  <div class="page__toc-title">On this page</div>
+  <ul class="page__toc-list">
+      <li class="page__toc-item page__toc-item--title">
+        <a href="#title">{{ page.title }}</a>
+      </li>
+    {% for h2 in page.toc %}
+      <li class="page__toc-item">
+        <a href="#{{ h2.id }}">{{ h2.title }}</a>
+        {% if h2.children %}
+          <ul class="page__toc-sublist">
+            {% for h3 in h2.children %}
+              <li class="page__toc-item page__toc-item--h3">
+                <a href="#{{ h3.id }}">{{ h3.title }}</a>
+                {% if h3.children %}
+                  <ul class="page__toc-sublist">
+                    {% for h4 in h3.children %}
+                      <li class="page__toc-item page__toc-item--h4">
+                        <a href="#{{ h4.id }}">{{ h4.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}

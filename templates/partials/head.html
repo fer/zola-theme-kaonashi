@@ -1,0 +1,18 @@
+<head>
+  <script>
+    (function(){var t=localStorage.getItem('theme-preference');if(t==='dark'){document.documentElement.dataset.theme='dark'}else if(t==='light'){document.documentElement.dataset.theme='light'}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.dataset.theme='dark'}})();
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% include "partials/seo.html" %}
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.title | default(value="Kaonashi") }}</title>
+  <link rel="icon" href="{{ get_url(path="favicon.ico") }}" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path="favicon-32x32.png") }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="favicon-16x16.png") }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path="apple-touch-icon.png") }}">
+<link rel="manifest" href="{{ get_url(path="site.webmanifest") }}">
+  {% include "partials/fonts.html" %}
+  <link rel="stylesheet" href="{{ get_url(path="main.css") }}">
+  {% include "partials/theme-vars.html" %}
+  {% include "partials/analytics.html" %}
+</head>

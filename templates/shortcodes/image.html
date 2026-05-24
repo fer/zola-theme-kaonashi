@@ -1,0 +1,10 @@
+{% set img_src = src %}
+{% if img_src is starting_with("/") %}{% set img_src = config.base_url ~ img_src %}{% endif %}
+{% if caption %}
+<figure class="figure">
+  <img src="{{ img_src }}" alt="{{ alt | default(value='') }}" loading="lazy">
+  <figcaption>{{ caption }}</figcaption>
+</figure>
+{% else %}
+<img src="{{ img_src }}" alt="{{ alt | default(value='') }}" loading="lazy">
+{% endif %}

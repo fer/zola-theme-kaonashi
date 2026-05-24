@@ -1,0 +1,6 @@
+{% set audio_src = src %}
+{% if audio_src is starting_with("/") %}{% set audio_src = config.base_url ~ audio_src %}{% endif %}
+<audio controls class="audio-player">
+  <source src="{{ audio_src }}" type="{{ type | default(value='audio/mpeg') }}">
+  Your browser does not support the audio element.
+</audio>

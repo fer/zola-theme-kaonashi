@@ -1,0 +1,35 @@
+<style>
+:root {
+  --body-font-family: {{ config.extra.theme.body_font_family | default(value="monospace, 'Courier New', Courier") | safe }};
+  --display-font-family: {{ config.extra.theme.display_font_family | default(value="'DotGothic16', monospace") | safe }};
+  --site-max-width: {{ config.extra.theme.site_max_width | default(value="900px") | safe }};
+  --border-thickness: {{ config.extra.theme.border_thickness | default(value="0.125rem") | safe }};
+  --toc-top-offset: {{ config.extra.theme.toc_top_offset | default(value="6rem") | safe }};
+  --site-padding: {{ config.extra.theme.site_padding | default(value="clamp(0.75rem, 3vw, 2rem)") | safe }};
+  --section-gap: {{ config.extra.theme.section_gap | default(value="3rem") | safe }};
+  --content-max-width-ch: {{ config.extra.theme.content_max_width_ch | default(value="68ch") | safe }};
+  --card-border-radius: {{ config.extra.theme.card_border_radius | default(value="0.5rem") | safe }};
+  --card-shadow: {{ config.extra.theme.card_shadow | default(value="0 12px 24px color-mix(in srgb, var(--body-color) 12%, transparent)") | safe }};
+  --project-card-shadow: {{ config.extra.theme.project_card_shadow | default(value="0 8px 20px color-mix(in srgb, var(--body-color) 12%, transparent)") | safe }};
+  --card-bg-gradient: {{ config.extra.theme.card_bg_gradient | default(value="linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02))") | safe }};
+  --img-radius: {{ config.extra.theme.img_radius | default(value="0.375rem") | safe }};
+  --img-grayscale: {{ config.extra.theme.img_grayscale | default(value="100%") | safe }};
+  --highlight-bg: {{ config.extra.theme.highlight_bg | default(value="color-mix(in srgb, #ffc800 30%, transparent)") | safe }};
+  --code-highlight-bg: {{ config.extra.theme.code_highlight_bg | default(value="color-mix(in srgb, #ffc800 12%, transparent)") | safe }};
+  --inline-code-bg: {{ config.extra.theme.inline_code_bg | default(value="color-mix(in srgb, var(--body-color) 12%, transparent)") | safe }};
+}
+[data-theme="dark"] {
+  --body-bg: {{ config.extra.theme.body_bg_dark | default(value="#0f1214") | safe }};
+  --body-color: {{ config.extra.theme.body_color_dark | default(value="#e6e2d6") | safe }};
+  --color-border: {{ config.extra.theme.color_border_dark | default(value="#333") | safe }};
+  --tag-bg: {{ config.extra.theme.tag_bg_dark | default(value="rgba(255,255,255,0.05)") | safe }};
+  --tag-border: {{ config.extra.theme.tag_border_dark | default(value="rgba(255,255,255,0.08)") | safe }};
+}
+[data-theme="light"] {
+  --body-bg: {{ config.extra.theme.body_bg_light | default(value="#e9e9e8") | safe }};
+  --body-color: {{ config.extra.theme.body_color_light | default(value="#1a1a1a") | safe }};
+  --color-border: {{ config.extra.theme.color_border_light | default(value="#ddd") | safe }};
+  --tag-bg: {{ config.extra.theme.tag_bg_light | default(value="rgba(0,0,0,0.06)") | safe }};
+  --tag-border: {{ config.extra.theme.tag_border_light | default(value="rgba(0,0,0,0.10)") | safe }};
+}
+</style>

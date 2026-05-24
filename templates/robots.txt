@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: {{ config.base_url | safe }}/sitemap.xml

@@ -1,0 +1,25 @@
+{% if page and (page.lower or page.higher) %}
+<nav class="page-nav" aria-label="Post navigation">
+  <div class="page-nav__inner">
+    {% if page.lower %}
+      <a class="page-nav__prev" href="{{ page.lower.permalink }}">← {{ page.lower.title }}</a>
+    {% else %}
+      <span></span>
+    {% endif %}
+    {% if page.higher %}
+      <a class="page-nav__next" href="{{ page.higher.permalink }}">{{ page.higher.title }} →</a>
+    {% endif %}
+  </div>
+</nav>
+{% elif paginator and (paginator.previous or paginator.next) %}
+<nav class="page-nav" aria-label="Page navigation">
+  <div class="page-nav__inner">
+    {% if paginator.previous %}
+      <a class="page-nav__prev" href="{{ paginator.previous }}">← Newer</a>
+    {% endif %}
+    {% if paginator.next %}
+      <a class="page-nav__next" href="{{ paginator.next }}">Older →</a>
+    {% endif %}
+  </div>
+</nav>
+{% endif %}

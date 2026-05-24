@@ -1,0 +1,23 @@
+name = "zola-theme-kaonashi"
+description = "A minimalist Zola theme with terminal-inspired aesthetic, dark/light mode, and responsive card grids"
+license = "MIT"
+homepage = "https://github.com/fer/zola-theme-kaonashi"
+demo = "https://fer.github.io/zola-theme-kaonashi"
+min_version = "0.19.0"
+tags = ["minimal", "blog", "portfolio", "dark-mode", "monospace", "terminal"]
+
+[author]
+name = "fer"
+homepage = "https://fer.github.io"
+
+[extra]
+[extra.theme]
+body_bg_dark = "#0f1214"
+body_color_dark = "#e6e2d6"
+color_border_dark = "#333"
+body_bg_light = "#e9e9e8"
+body_color_light = "#1a1a1a"
+color_border_light = "#ddd"
+body_font_family = "monospace, 'Courier New', Courier"
+site_max_width = "900px"
+border_thickness = "0.125rem"

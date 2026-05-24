@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "macros/post.html" as post %}
+
+{% block main_class %}main--section{% endblock %}
+
+{% block content %}
+  {% set title = term.name %}
+  {% set count = term.pages | length %}
+  {% if count == 1 %}
+    {% set description = "1 post" %}
+  {% else %}
+    {% set description = count ~ " posts" %}
+  {% endif %}
+  {% include "partials/section-header.html" %}
+
+  <ul class="post__list">
+    {% for page in term.pages %}
+      {{ post::list_item(page=page) }}
+    {% endfor %}
+  </ul>
+{% endblock %}

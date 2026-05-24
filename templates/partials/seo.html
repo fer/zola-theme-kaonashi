@@ -1,0 +1,31 @@
+{% set meta_description = "" %}
+{%- if page and page.description %}
+{% set_global meta_description = page.description %}
+{%- elif section and section.description %}
+{% set_global meta_description = section.description %}
+{%- else %}
+{% set_global meta_description = config.description %}
+{%- endif %}
+<meta name="description" content="{{ meta_description }}">
+{% set og_title = "" %}
+{%- if page and page.title %}
+{% set_global og_title = page.title %}
+{%- elif section and section.title %}
+{% set_global og_title = section.title %}
+{%- else %}
+{% set_global og_title = config.title %}
+{%- endif %}
+<meta property="og:title" content="{{ og_title }}">
+<meta property="og:description" content="{{ meta_description }}">
+<meta property="og:url" content="{% if current_url %}{{ current_url | safe }}{% else %}{{ config.base_url | safe }}{% endif %}">
+<meta property="og:type" content="{% if page and page.date %}article{% else %}website{% endif %}">
+{%- if page and page.extra.splash %}
+<meta property="og:image" content="{{ config.base_url }}{{ page.extra.splash | safe }}">
+{%- endif %}
+<meta name="twitter:card" content="{% if page and page.extra.splash %}summary_large_image{% else %}summary{% endif %}">
+{%- if current_url %}
+<link rel="canonical" href="{{ current_url | safe }}">
+{%- endif %}
+{%- if config.extra.social.rss %}
+<link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ config.extra.social.rss | safe }}">
+{%- endif %}

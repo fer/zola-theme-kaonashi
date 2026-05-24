@@ -1,0 +1,46 @@
+.code-line {
+  display: flex;
+  align-items: baseline;
+  min-height: 1.55em;
+}
+
+.code-line:nth-child(even) {
+  background: rgba(128, 128, 128, 0.04);
+}
+
+.line-num {
+  user-select: none;
+  text-align: right;
+  min-width: 2.5rem;
+  padding-right: 1rem;
+  opacity: 0.35;
+  border-right: 1px solid var(--color-border);
+  flex-shrink: 0;
+  font-size: 0.85em;
+}
+
+.line-text {
+  padding-left: 1rem;
+  flex: 1;
+  white-space: pre;
+}
+
+.code-line--highlighted {
+  background: var(--code-highlight-bg, color-mix(in srgb, #ffc800 12%, transparent));
+}
+
+.code-line--highlighted .line-num {
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.has-line-numbers {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.has-line-numbers code {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+}

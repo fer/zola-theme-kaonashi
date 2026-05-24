@@ -1,0 +1,4 @@
+<details{% if summary %} open{% endif %}>
+  {% if summary %}<summary>{{ summary }}</summary>{% endif %}
+{{ body | markdown | safe }}
+</details>

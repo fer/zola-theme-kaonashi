@@ -1,0 +1,24 @@
+{% import "macros/tags.html" as tags %}
+
+{% macro project_card(page, pinned=false) %}
+{% set splash = page.extra.splash | default(value=get_url(path="images/screenshot-hello-world.png")) %}
+{% if splash is starting_with("/") %}{% set splash = config.base_url ~ splash %}{% endif %}
+<li class="project__card{% if pinned %} project__card--pinned{% endif %}">
+  {% if page.extra.status %}
+    <span class="project__card-ribbon project__card-ribbon--{{ page.extra.status | slugify }}">{{ page.extra.status }}</span>
+  {% endif %}
+  <a href="{{ page.permalink }}" class="project__card-link">
+      <div class="project__card-image">
+        <img src="{{ splash }}" alt="{{ page.title }}" loading="lazy">
+      </div>
+    <h3 class="project__card-title">{{ page.title }}{% if pinned %} <span class="pinned-badge">♥</span>{% endif %}</h3>
+    {% if page.date %}
+      <span class="project__card-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+    {% endif %}
+    {% if page.description %}
+      <p class="project__card-description">{{ page.description }}</p>
+    {% endif %}
+    {{ tags::render(page=page, wrapper_class="project__card-tags") }}
+  </a>
+</li>
+{% endmacro project_card %}

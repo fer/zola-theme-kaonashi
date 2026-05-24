@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import "macros/tags.html" as tags %}
+
+{% block main_class %}{% if page.date %}main--post{% else %}main--section{% endif %}{% endblock %}
+
+{% block content %}
+  {% set is_bookshelf = page.components and page.components[0] == "bookshelf" %}
+  {% set has_book_meta = is_bookshelf and (page.extra.splash or page.extra.author or page.extra.publisher or page.extra.year or page.extra.isbn or page.extra.url or page.extra.rating) %}
+
+  {% set splash = get_url(path="images/screenshot-hello-world.png") %}
+  <article{% if page.extra.pinned %} class="page--pinned"{% endif %}>
+    {% if not is_bookshelf %}
+      <div class="page__splash">
+        <img src="{{ splash }}" alt="{{ page.title }} splash" loading="lazy">
+      </div>
+    {% endif %}
+
+    <div class="page__layout{% if has_book_meta %} page__layout--bookshelf{% endif %}">
+      {% include "partials/toc.html" %}
+
+      <div class="page__body">
+        {% include "partials/page-meta.html" %}
+        {% if page.date %}
+        <h1 class="page__title" id="title">{{ page.title }}</h1>
+        {% else %}
+        <h1 class="section__title" id="title">{{ page.title }}</h1>
+        {% endif %}
+        {% if page.extra.status and not is_bookshelf %}
+          <span class="page__status page__status--{{ page.extra.status | slugify }}">{{ page.extra.status }}</span>
+        {% endif %}
+        {% if page.description %}
+          <p class="description">{{ page.description }}</p>
+        {% endif %}
+
+        <div class="page__content">
+          {{ page.content | safe }}
+        </div>
+
+
+      </div>
+
+      {% include "partials/book-meta.html" %}
+    </div>
+  </article>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% set has_section = page.ancestors | length > 1 %}
+{% if has_section %}{% set parent = get_section(path=page.ancestors | last) %}{% endif %}
+{% set has_meta = page.date or has_section or page.taxonomies.tags %}
+{% if has_meta %}
+<div class="meta">
+  <span class="meta__info">
+  {% if page.date %}
+    <time datetime="{{ page.date }}">{{ page.date | date(format="%Y-%m-%d") }}</time>
+  {% endif %}
+  {% set author = page.author | default(value=config.extra.author) %}
+  {% if author %}<span> — {{ author }}</span>{% endif %}
+  {% set word_count = page.word_count | default(value=0) %}
+  {% if word_count > 0 %}
+    {% set reading_time = (word_count / 200) | round(method="ceil") %}
+    {% if reading_time < 1 %}{% set reading_time = 1 %}{% endif %}
+    <span> · {{ reading_time }} min read</span>
+  {% endif %}
+  {% if has_section %}
+    <span> · in <a href="{{ parent.permalink }}">{{ parent.title }}</a></span>
+  {% endif %}
+  </span>
+  {{ tags::render(page=page, wrapper_class="tags") }}
+</div>
+{% endif %}

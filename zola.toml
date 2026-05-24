@@ -1,0 +1,78 @@
+base_url = "https://fer.github.io/zola-theme-kaonashi"
+title = "Kaonashi Theme Demo"
+description = "A demo site for the Kaonashi Zola theme"
+compile_sass = true
+build_search_index = true
+
+taxonomies = [
+  {name = "tags", feed = true},
+]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+author = "fer"
+bio = "A writer sharing work on web design, theming, and modern publishing."
+
+[extra.social]
+github = "https://github.com/fer"
+email = "mailto:hello@example.com"
+rss = "/posts/atom.xml"
+
+[[extra.menu]]
+url = "/posts/"
+label = "Posts"
+
+[[extra.menu]]
+url = "/projects/"
+label = "Projects"
+
+[[extra.menu]]
+url = "/bookshelf/"
+label = "Bookshelf"
+
+[[extra.menu]]
+url = "/contact/"
+label = "Contact"
+
+[[extra.menu]]
+url = "/tags/"
+label = "Tags"
+
+[[extra.menu]]
+url = "/archive/"
+label = "Archive"
+
+[[extra.menu]]
+url = "/faq/"
+label = "FAQ"
+
+[extra.theme]
+body_bg_dark = "#0f1214"
+body_color_dark = "#e6e2d6"
+color_border_dark = "#333"
+body_bg_light = "#e9e9e8"
+body_color_light = "#1a1a1a"
+color_border_light = "#ddd"
+tag_bg_dark = "rgba(255,255,255,0.05)"
+tag_border_dark = "rgba(255,255,255,0.08)"
+tag_bg_light = "rgba(0,0,0,0.06)"
+tag_border_light = "rgba(0,0,0,0.10)"
+body_font_family = "monospace, 'Courier New', Courier"
+display_font_family = "'DotGothic16', monospace"
+site_max_width = "1100px"
+border_thickness = "0.125rem"
+toc_top_offset = "7.1rem"
+site_padding = "clamp(0.75rem, 3vw, 2rem)"
+section_gap = "3rem"
+content_max_width_ch = "68ch"
+card_border_radius = "0.5rem"
+card_shadow = "0 12px 24px color-mix(in srgb, var(--body-color) 12%, transparent)"
+project_card_shadow = "0 8px 20px color-mix(in srgb, var(--body-color) 12%, transparent)"
+card_bg_gradient = "linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02))"
+img_radius = "0.375rem"
+img_grayscale = "100%"
+highlight_bg = "color-mix(in srgb, #ffc800 30%, transparent)"
+code_highlight_bg = "color-mix(in srgb, #ffc800 12%, transparent)"
+inline_code_bg = "color-mix(in srgb, var(--body-color) 12%, transparent)"

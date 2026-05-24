@@ -1,0 +1,16 @@
+{% macro render(page, wrapper_class="tags", link=true) %}
+{% if page.taxonomies.tags %}
+  {% set taxonomy = get_taxonomy(kind="tags") %}
+  <span class="{{ wrapper_class }}">
+    {% for term in taxonomy.items | sort(attribute="page_count") | reverse %}
+      {% if page.taxonomies.tags is containing(term.name) %}
+        {% if link %}
+          <a class="tag" href="{{ term.permalink }}">{{ term.name }}</a>
+        {% else %}
+          <span class="tag" data-href="{{ term.permalink }}">{{ term.name }}</span>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </span>
+{% endif %}
+{% endmacro render %}

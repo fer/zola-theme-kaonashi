@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article class="error-page">
+    <h1>{{ page.title | default(value='Page not found') }}</h1>
+    {% if page.content %}
+      <div class="page__content">{{ page.content | safe }}</div>
+    {% else %}
+      <p>The page you requested doesn't exist.</p>
+    {% endif %}
+  </article>
+{% endblock %}

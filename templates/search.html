@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block main_class %}main--section{% endblock %}
+
+{% block content %}
+  {% set title = "Search" %}
+  {% include "partials/section-header.html" %}
+
+  <input type="search" id="search-input" class="search-input" placeholder="Search..." autofocus>
+  <p class="search-hint">Press <kbd>/</kbd> to focus search from anywhere</p>
+  <div id="search-tag-filter" class="search-tag-filter"></div>
+  <div id="search-results" class="search-results"></div>
+
+  <script src="{{ get_url(path="js/elasticlunr.min.js") }}"></script>
+
+  <script>
+  window.searchMeta = {
+  {% set_global meta_first = true %}
+  {% for section_name in ["posts", "projects", "bookshelf"] %}
+    {% set section = get_section(path=section_name ~ "/_index.md") %}
+    {% for page in section.pages %}
+      {% if not meta_first %},{% endif %}{% set_global meta_first = false %}
+      "{{ page.permalink | safe }}": {
+        "section": "{{ section_name }}",
+        "date": "{{ page.date }}",
+        "tags": [{% set_global tag_sep = false %}{% if page.taxonomies.tags %}{% for tag in page.taxonomies.tags %}{% if tag_sep %}, {% endif %}{% set_global tag_sep = true %}"{{ tag }}"{% endfor %}{% endif %}{% if page.extra.labels %}{% for label in page.extra.labels %}{% if tag_sep %}, {% endif %}{% set_global tag_sep = true %}"{{ label }}"{% endfor %}{% endif %}]
+      }
+    {% endfor %}
+  {% endfor %}
+  };
+  </script>
+
+  <script>window.searchIndexUrl = "{{ get_url(path="search_index.en.js") }}";</script>
+  <script src="{{ get_url(path="js/search.js") }}"></script>
+{% endblock %}

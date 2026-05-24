@@ -1,0 +1,228 @@
+@use 'variables' as *;
+
+.site__header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--body-bg);
+  border-bottom: $border;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: $header-margin-bottom;
+}
+
+.site__header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.site__header-nav-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site__header-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site__header-nav-list-item-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: var(--border-thickness, $border-thickness) solid transparent;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0;
+  transition: background-color $transition-normal, color $transition-normal, opacity $transition-normal, transform $transition-normal;
+}
+
+/* Hover uses same visual treatment as active; don't override active */
+.site__header-nav-list-item-link:not(.is-active):hover {
+  /* Invert colors: use text color as background and background color as text */
+  background-color: var(--body-color);
+  color: var(--body-bg);
+  font-weight: 700;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* Active nav link */
+.site__header-nav-list-item-link.is-active {
+  /* Active uses same inverted treatment as hover */
+  background-color: var(--body-color);
+  color: var(--body-bg);
+  font-weight: 700;
+  opacity: 1;
+  border-radius: 0;
+  padding: 0.4rem 0.75rem;
+}
+
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  color: var(--body-color);
+  opacity: 0.55;
+  transition: opacity $transition-fast;
+  flex-shrink: 0;
+}
+
+.rss-link:hover {
+  opacity: 1;
+  background-color: transparent;
+  color: var(--body-color);
+}
+
+.menu-counter {
+  display: none;
+  font-size: 0.8em;
+  opacity: 0.55;
+  margin-left: 0.25em;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--body-color);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger[aria-expanded="true"] .hamburger__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger[aria-expanded="true"] .hamburger__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.logo,
+.logo:hover {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+/* ── Theme Toggle Switch ── */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1;
+  color: var(--body-color);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--body-color);
+  outline-offset: 4px;
+  border-radius: 999px;
+}
+
+.theme-toggle__track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 3.25rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  border: $border;
+  background-color: var(--body-color);
+  padding: 0 0.3rem;
+  transition: background-color $transition-slow, border-color $transition-slow;
+}
+
+.theme-toggle__thumb {
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--body-bg);
+  transform: translateY(-50%);
+  transition: left $transition-slow, background-color $transition-slow;
+  z-index: 1;
+}
+
+[data-theme="dark"] .theme-toggle__thumb {
+  left: calc(100% - 1.2rem - 0.2rem);
+}
+
+.theme-toggle__icon {
+  font-size: 0.95rem;
+  line-height: 1;
+  z-index: 2;
+  user-select: none;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+/* In light mode: sun on left thumb (dark), moon on right track (light, dimmed) */
+[data-theme="light"] .theme-toggle__icon--sun {
+  color: var(--body-color);
+  opacity: 1;
+  margin-left: 0.1rem;
+}
+[data-theme="light"] .theme-toggle__icon--moon {
+  color: var(--body-bg);
+  opacity: 0.55;
+}
+
+/* In dark mode: moon on right thumb (light), sun on left track (dark, dimmed) */
+[data-theme="dark"] .theme-toggle__icon--sun {
+  color: var(--body-bg);
+  opacity: 0.55;
+}
+[data-theme="dark"] .theme-toggle__icon--moon {
+  color: var(--body-color);
+  opacity: 1;
+}
+
+.theme-toggle:hover .theme-toggle__track {
+  border-color: var(--body-color);
+}
+
+.theme-toggle:hover .theme-toggle__thumb {
+  transform: translateY(-50%) scale(1.1);
+}

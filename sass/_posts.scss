@@ -1,0 +1,211 @@
+@use 'variables' as *;
+
+.post__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post__list-item {
+  margin: 0 0 0.35rem;
+}
+
+.post__list-item-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  gap: 1rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+  background: color-mix(in srgb, var(--body-color) 5%, transparent);
+  transition: opacity $transition-fast, background-color $transition-fast, color $transition-fast;
+}
+
+.post__list-item-title {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post__list-item-link.has-bg {
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.post__list-item-link.has-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--body-bg) 88%, transparent);
+  z-index: 0;
+}
+
+.post__list-item-link.has-bg:hover::before {
+  background: color-mix(in srgb, var(--body-bg) 94%, transparent);
+}
+
+.post__list-item-link.has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.post__list-item-date {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.post__list-item-tags {
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.post__list-item-tags .tag {
+  margin-right: 0;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.3rem;
+  cursor: pointer;
+}
+
+.post__list-item-link:hover .post__list-item-tags .tag {
+  background: var(--body-bg);
+  color: var(--body-color);
+  border-color: var(--body-bg);
+}
+
+/* Homepage card grid */
+.post__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.post__card {
+  background: var(--card-bg-gradient, linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)));
+  border: $border;
+  border-radius: var(--card-border-radius, 0.5rem);
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+}
+
+.post__card .post__card-inner {
+  padding: 1.25rem 1rem;
+}
+
+.post__card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow, 0 12px 24px color-mix(in srgb, var(--body-color) 12%, transparent));
+}
+
+.post__card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.post__card-title {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make the whole row highlight on hover and use inverted colors */
+.post__list-item-link:hover {
+  background-color: var(--body-color);
+  color: var(--body-bg);
+  opacity: 1;
+}
+.post__list-item-link:hover .post__list-item-date {
+  color: var(--body-bg);
+}
+
+.post__list-item-link.has-bg:hover {
+  background-color: transparent;
+  color: inherit;
+  opacity: 1;
+}
+.post__list-item-link.has-bg:hover .post__list-item-date {
+  color: inherit;
+}
+
+.post__card-meta {
+  margin-top: 0.1rem;
+  font-size: 0.85rem;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.post__card-excerpt {
+  margin-top: 0.1rem;
+  font-size: 0.95rem;
+  color: inherit;
+  opacity: 0.85;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.posts-overview {
+  margin-top: var(--section-gap, $section-gap);
+}
+
+.posts-overview h3 {
+  margin: 0 0 1rem 0;
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: $border;
+}
+
+.pinned-badge {
+  margin-left: 0.35rem;
+  opacity: 0.7;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  color: var(--body-color);
+}
+
+.post__list-item--pinned .post__list-item-link {
+  border-left: 3px solid color-mix(in srgb, var(--body-color) 25%, transparent);
+  padding-left: calc(0.5rem - 3px);
+}
+
+.post__list-item--pinned .post__list-item-link:hover {
+  border-left-color: var(--body-bg);
+}
+
+.archive__year {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  margin: 2rem 0 0.75rem 0;
+  padding-top: 0.75rem;
+  border-top: $border;
+}
+
+.archive__year:first-of-type {
+  margin-top: 0.5rem;
+  padding-top: 0;
+  border-top: none;
+}

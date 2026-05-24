@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% import "macros/post.html" as post %}
+{% import "macros/project.html" as projects %}
+
+{% block main_class %}main--section{% endblock %}
+
+{% block content %}
+  {% set title = section.title %}
+  {% set description = section.description %}
+  {% set full_section = get_section(path=section.relative_path) %}
+  {% set count = full_section.pages | length %}
+  {% include "partials/section-header.html" %}
+
+  {% if section.content %}<div class="section__content">{{ section.content | safe }}</div>{% endif %}
+
+  {% set pages = paginator.pages | default(value=section.pages) %}
+
+  {% set is_bookshelf = section.components and section.components[0] == "bookshelf" %}
+  {% if section.components and (section.components[0] == "projects" or is_bookshelf) %}
+    <ul class="project__grid{% if is_bookshelf %} project__grid--bookshelf{% endif %}">
+      {% for page in pages %}
+        {% if page.extra.pinned %}
+          {{ projects::project_card(page=page, pinned=true) }}
+        {% endif %}
+      {% endfor %}
+      {% for page in pages %}
+        {% if not page.extra.pinned %}
+          {{ projects::project_card(page=page) }}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% else %}
+    {% if pages %}
+      <ul class="post__list">
+        {% for page in pages %}
+          {% if page.extra.pinned %}
+            {{ post::list_item(page=page) }}
+          {% endif %}
+        {% endfor %}
+        {% for page in pages %}
+          {% if not page.extra.pinned %}
+            {{ post::list_item(page=page) }}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+
+
+{% endblock %}
