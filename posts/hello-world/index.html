@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+  <script>
+    (function(){var t=localStorage.getItem('theme-preference');if(t==='dark'){document.documentElement.dataset.theme='dark'}else if(t==='light'){document.documentElement.dataset.theme='light'}else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.dataset.theme='dark'}})();
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+
+<meta name="description" content="Welcome to the Kaonashi theme demo">
+
+
+<meta property="og:title" content="Hello World">
+<meta property="og:description" content="Welcome to the Kaonashi theme demo">
+<meta property="og:url" content="https://fer.github.io/zola-theme-kaonashi/posts/hello-world/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi/images/screenshot-hello-world.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://fer.github.io/zola-theme-kaonashi/posts/hello-world/">
+<link rel="alternate" type="application/atom+xml" title="Kaonashi Theme Demo" href="/posts/atom.xml">
+
+  <title>Hello World - Kaonashi Theme Demo</title>
+  <link rel="icon" href="https://fer.github.io/zola-theme-kaonashi/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="https://fer.github.io/zola-theme-kaonashi/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://fer.github.io/zola-theme-kaonashi/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://fer.github.io/zola-theme-kaonashi/apple-touch-icon.png">
+<link rel="manifest" href="https://fer.github.io/zola-theme-kaonashi/site.webmanifest">
+  
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://fer.github.io/zola-theme-kaonashi/main.css">
+  <style>
+:root {
+  --body-font-family: monospace, 'Courier New', Courier;
+  --display-font-family: 'DotGothic16', monospace;
+  --site-max-width: 1100px;
+  --border-thickness: 0.125rem;
+  --toc-top-offset: 7.1rem;
+  --site-padding: clamp(0.75rem, 3vw, 2rem);
+  --section-gap: 3rem;
+  --content-max-width-ch: 68ch;
+  --card-border-radius: 0.5rem;
+  --card-shadow: 0 12px 24px color-mix(in srgb, var(--body-color) 12%, transparent);
+  --project-card-shadow: 0 8px 20px color-mix(in srgb, var(--body-color) 12%, transparent);
+  --card-bg-gradient: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  --img-radius: 0.375rem;
+  --img-grayscale: 100%;
+  --highlight-bg: color-mix(in srgb, #ffc800 30%, transparent);
+  --code-highlight-bg: color-mix(in srgb, #ffc800 12%, transparent);
+  --inline-code-bg: color-mix(in srgb, var(--body-color) 12%, transparent);
+}
+[data-theme="dark"] {
+  --body-bg: #0f1214;
+  --body-color: #e6e2d6;
+  --color-border: #333;
+  --tag-bg: rgba(255,255,255,0.05);
+  --tag-border: rgba(255,255,255,0.08);
+}
+[data-theme="light"] {
+  --body-bg: #e9e9e8;
+  --body-color: #1a1a1a;
+  --color-border: #ddd;
+  --tag-bg: rgba(0,0,0,0.06);
+  --tag-border: rgba(0,0,0,0.10);
+}
+</style>
+
+  
+
+</head>
+
+  <body class="site">
+    <div class="site__wrapper">
+      <header class="site__header">
+  <div class="site__header-content">
+    <a class="logo" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi">
+      
+      <img class="logo__img" src="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;images&#x2F;logo.png" alt="Kaonashi Theme Demo logo">
+    </a>
+    <div class="site__header-nav-group">
+      <nav class="site__header-nav" id="site-nav" aria-label="Main navigation">
+        <ul class="site__header-nav-list">
+          
+            
+              <li class="site__header-nav-list-item">
+                <a class="site__header-nav-list-item-link" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;posts&#x2F;">
+                  Posts
+                  
+                    
+                    <span class="menu-counter">(5)</span>
+                  
+                </a>
+              </li>
+            
+              <li class="site__header-nav-list-item">
+                <a class="site__header-nav-list-item-link" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;projects&#x2F;">
+                  Projects
+                  
+                    
+                    <span class="menu-counter">(4)</span>
+                  
+                </a>
+              </li>
+            
+              <li class="site__header-nav-list-item">
+                <a class="site__header-nav-list-item-link" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;bookshelf&#x2F;">
+                  Bookshelf
+                  
+                    
+                    <span class="menu-counter">(2)</span>
+                  
+                </a>
+              </li>
+            
+              <li class="site__header-nav-list-item">
+                <a class="site__header-nav-list-item-link" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;contact&#x2F;">
+                  Contact
+                  
+                </a>
+              </li>
+            
+              <li class="site__header-nav-list-item">
+                <a class="site__header-nav-list-item-link" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;tags&#x2F;">
+                  Tags
+                  
+                    
+                    <span class="menu-counter">(16)</span>
+                  
+                </a>
+              </li>
+            
+              <li class="site__header-nav-list-item">
+                <a class="site__header-nav-list-item-link" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;archive&#x2F;">
+                  Archive
+                  
+                </a>
+              </li>
+            
+              <li class="site__header-nav-list-item">
+                <a class="site__header-nav-list-item-link" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;faq&#x2F;">
+                  FAQ
+                  
+                </a>
+              </li>
+            
+          
+        </ul>
+      </nav>
+      <a class="search-link" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi/search/" title="Search" aria-label="Search">
+        <svg class="search-link__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+      </a>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle theme">
+        <span class="theme-toggle__track">
+          <span class="theme-toggle__icon theme-toggle__icon--sun">☀</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon">☾</span>
+          <span class="theme-toggle__thumb"></span>
+        </span>
+      </button>
+      <a class="rss-link" href="/posts/atom.xml" title="RSS Feed" aria-label="RSS Feed">
+        <svg class="rss-link__icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/>
+        </svg>
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </div>
+</header>
+
+      <main class="main--post">
+        
+  
+  
+
+  
+  <article class="page--pinned">
+    
+      <div class="page__splash">
+        <img src="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;images&#x2F;screenshot-hello-world.png" alt="Hello World splash" loading="lazy">
+      </div>
+    
+
+    <div class="page__layout">
+      
+<aside class="page__toc">
+  <div class="page__toc-title">On this page</div>
+  <ul class="page__toc-list">
+      <li class="page__toc-item page__toc-item--title">
+        <a href="#title">Hello World</a>
+      </li>
+    
+      <li class="page__toc-item">
+        <a href="#features">Features</a>
+        
+          <ul class="page__toc-sublist">
+            
+              <li class="page__toc-item page__toc-item--h3">
+                <a href="#code-block-example">Code block example</a>
+                
+              </li>
+            
+              <li class="page__toc-item page__toc-item--h3">
+                <a href="#inline-code">Inline code</a>
+                
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+</aside>
+
+
+
+      <div class="page__body">
+        
+
+
+
+<div class="meta">
+  <span class="meta__info">
+  
+    <time datetime="2026-05-20">2026-05-20</time>
+  
+  
+  <span> — fer</span>
+  
+  
+    
+    
+    <span> · 1 min read</span>
+  
+  
+    <span> · in <a href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;posts&#x2F;">Posts</a></span>
+  
+  </span>
+  
+
+  
+  <span class="tags">
+    
+      
+        
+          <a class="tag" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;tags&#x2F;theme&#x2F;">theme</a>
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="tag" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;tags&#x2F;demo&#x2F;">demo</a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </span>
+
+
+</div>
+
+
+        
+        <h1 class="page__title" id="title">Hello World</h1>
+        
+        
+        
+          <p class="description">Welcome to the Kaonashi theme demo</p>
+        
+
+        <div class="page__content">
+          <p>Welcome to the Kaonashi theme demo! This post demonstrates the terminal-inspired aesthetic with monospace typography and a dark/light mode toggle.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Dark/light mode</strong> — Toggle with the sun/moon button in the header</li>
+<li><strong>Monospace typography</strong> — Clean, readable code-friendly fonts</li>
+<li><strong>Responsive design</strong> — Works on mobile, tablet, and desktop</li>
+</ul>
+<h3 id="code-block-example">Code block example</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;"><code data-lang="rust"><span class="giallo-l"><span style="color: #CBA6F7;">fn</span><span style="color: #89B4FA;font-style: italic;"> main</span><span style="color: #9399B2;">() {</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">    println!</span><span style="color: #9399B2;">(</span><span style="color: #A6E3A1;">&quot;Hello, Kaonashi!&quot;</span><span style="color: #9399B2;">);</span></span>
+<span class="giallo-l"><span style="color: #CBA6F7;">    for</span><span> i</span><span style="color: #CBA6F7;"> in</span><span style="color: #FAB387;"> 0</span><span style="color: #94E2D5;">..</span><span style="color: #FAB387;">5</span><span style="color: #9399B2;"> {</span></span>
+<span class="giallo-l"><span style="color: #89B4FA;font-style: italic;">        println!</span><span style="color: #9399B2;">(</span><span style="color: #A6E3A1;">&quot;Count: </span><span style="color: #9399B2;">{}</span><span style="color: #A6E3A1;">&quot;</span><span style="color: #9399B2;">,</span><span> i</span><span style="color: #9399B2;">);</span></span>
+<span class="giallo-l"><span style="color: #9399B2;">    }</span></span>
+<span class="giallo-l"><span style="color: #9399B2;">}</span></span></code></pre><h3 id="inline-code">Inline code</h3>
+<p>Use <code>zola serve</code> to start the development server.</p>
+
+        </div>
+
+
+      </div>
+
+      
+
+    </div>
+  </article>
+
+      </main>
+      
+<nav class="page-nav" aria-label="Post navigation">
+  <div class="page-nav__inner">
+    
+      <span></span>
+    
+    
+      <a class="page-nav__next" href="https:&#x2F;&#x2F;fer.github.io&#x2F;zola-theme-kaonashi&#x2F;posts&#x2F;markdown-showcase&#x2F;">Markdown Showcase →</a>
+    
+  </div>
+</nav>
+
+
+      <footer class="site__footer">
+  <p>Powered by <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a> &amp; <a href="https://github.com/fer/zola-theme-kaonashi" target="_blank" rel="noopener">Kaonashi theme</a> and built by <a href="https://github.com/fer" target="_blank" rel="noopener">fer</a> with ❤️</p>
+</footer>
+
+    </div>
+    <script src="https://fer.github.io/zola-theme-kaonashi/js/main.js"></script>
+
+    <a href="#" class="back-to-top" aria-label="Back to top" title="Back to top">↑</a>
+  </body>
+</html>

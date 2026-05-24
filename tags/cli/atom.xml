@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Kaonashi Theme Demo</title>
+  <subtitle>A demo site for the Kaonashi Zola theme</subtitle>
+  <link href="https://fer.github.io/zola-theme-kaonashi/tags/cli/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://fer.github.io/zola-theme-kaonashi"/>
+  <updated>2026-04-15T00:00:00+00:00</updated>
+  <id>https://fer.github.io/zola-theme-kaonashi</id>
+  
+  <author>
+    <name>fer</name>
+  </author>
+  
+  
+  <entry>
+    <title>Rust CLI Tool</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/projects/rust-cli-tool/" type="text/html"/>
+    <published>2026-04-15T00:00:00+00:00</published>
+    <updated>2026-04-15T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/projects/rust-cli-tool/</id>
+    
+    <summary>A command-line utility written in Rust</summary>
+    
+    <content type="html">&lt;p&gt;A command-line tool built with Rust and clap for argument parsing. Features subcommands, colored output, and config file support.&lt;&#x2F;p&gt;
+&lt;p&gt;Built with the Rust edition 2024, targeting &lt;strong&gt;≥ 1.85&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+</feed>

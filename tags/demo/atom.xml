@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Kaonashi Theme Demo</title>
+  <subtitle>A demo site for the Kaonashi Zola theme</subtitle>
+  <link href="https://fer.github.io/zola-theme-kaonashi/tags/demo/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://fer.github.io/zola-theme-kaonashi"/>
+  <updated>2026-05-20T00:00:00+00:00</updated>
+  <id>https://fer.github.io/zola-theme-kaonashi</id>
+  
+  <author>
+    <name>fer</name>
+  </author>
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/posts/hello-world/" type="text/html"/>
+    <published>2026-05-20T00:00:00+00:00</published>
+    <updated>2026-05-20T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/posts/hello-world/</id>
+    
+    <summary>Welcome to the Kaonashi theme demo</summary>
+    
+    <content type="html">&lt;p&gt;Welcome to the Kaonashi theme demo! This post demonstrates the terminal-inspired aesthetic with monospace typography and a dark&#x2F;light mode toggle.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dark&#x2F;light mode&lt;&#x2F;strong&gt; — Toggle with the sun&#x2F;moon button in the header&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Monospace typography&lt;&#x2F;strong&gt; — Clean, readable code-friendly fonts&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Responsive design&lt;&#x2F;strong&gt; — Works on mobile, tablet, and desktop&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;code-block-example&quot;&gt;Code block example&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;rust&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;fn&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; main&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;() {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;    println!&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;Hello, Kaonashi!&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    for&lt;&#x2F;span&gt;&lt;span&gt; i&lt;&#x2F;span&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt; in&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; 0&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;..&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt;5&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; {&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;        println!&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;Count: &lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;{}&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;,&lt;&#x2F;span&gt;&lt;span&gt; i&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;);&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;    }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;inline-code&quot;&gt;Inline code&lt;&#x2F;h3&gt;
+&lt;p&gt;Use &lt;code&gt;zola serve&lt;&#x2F;code&gt; to start the development server.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Dark Mode &amp; Shortcodes Demo</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/posts/dark-mode/" type="text/html"/>
+    <published>2026-05-07T00:00:00+00:00</published>
+    <updated>2026-05-07T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/posts/dark-mode/</id>
+    
+    <summary>Showcasing theme features and bundled shortcodes</summary>
+    
+    <content type="html">&lt;p&gt;This post demonstrates Kaonashi&#x27;s bundled shortcodes and features.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;image-with-caption&quot;&gt;Image with caption&lt;&#x2F;h2&gt;
+
+
+
+&lt;figure class=&quot;figure&quot;&gt;
+  &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;placehold.co&amp;#x2F;800x400&amp;#x2F;333&amp;#x2F;e6e2d6?text=Sample+Image&quot; alt=&quot;Sample image&quot; loading=&quot;lazy&quot;&gt;
+  &lt;figcaption&gt;A placeholder image with caption&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+&lt;h2 id=&quot;collapsible-details&quot;&gt;Collapsible details&lt;&#x2F;h2&gt;
+&lt;details open&gt;
+  &lt;summary&gt;Click to reveal&lt;&#x2F;summary&gt;
+&lt;p&gt;Hidden content revealed on click. Supports &lt;strong&gt;markdown&lt;&#x2F;strong&gt; and code blocks:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;json&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;{ &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;key&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;&amp;quot;:&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;value&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt; }&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;details&gt;
+&lt;h2 id=&quot;faq-shortcode&quot;&gt;FAQ shortcode&lt;&#x2F;h2&gt;
+
+
+&lt;details class=&quot;faq__item&quot;&gt;
+  &lt;summary class=&quot;faq__question&quot;&gt;What is Zola?&lt;&#x2F;summary&gt;
+  &lt;div class=&quot;faq__answer&quot;&gt;
+&lt;p&gt;Zola is a fast static site generator written in Rust, with hot-reload, Sass compilation, and a built-in search index.&lt;&#x2F;p&gt;
+
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;details&gt;
+
+
+
+&lt;details class=&quot;faq__item&quot;&gt;
+  &lt;summary class=&quot;faq__question&quot;&gt;What is Kaonashi?&lt;&#x2F;summary&gt;
+  &lt;div class=&quot;faq__answer&quot;&gt;
+&lt;p&gt;Kaonashi is a minimalist Zola theme with a terminal-inspired aesthetic, dark&#x2F;light mode, and responsive card grids.&lt;&#x2F;p&gt;
+
+  &lt;&#x2F;div&gt;
+&lt;&#x2F;details&gt;
+
+</content>
+  </entry>
+  
+</feed>

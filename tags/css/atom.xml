@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Kaonashi Theme Demo</title>
+  <subtitle>A demo site for the Kaonashi Zola theme</subtitle>
+  <link href="https://fer.github.io/zola-theme-kaonashi/tags/css/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://fer.github.io/zola-theme-kaonashi"/>
+  <updated>2026-03-20T00:00:00+00:00</updated>
+  <id>https://fer.github.io/zola-theme-kaonashi</id>
+  
+  <author>
+    <name>fer</name>
+  </author>
+  
+  
+  <entry>
+    <title>Terminal Portfolio</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/projects/terminal-portfolio/" type="text/html"/>
+    <published>2026-03-20T00:00:00+00:00</published>
+    <updated>2026-03-20T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/projects/terminal-portfolio/</id>
+    
+    <summary>A terminal-styled portfolio website</summary>
+    
+    <content type="html">&lt;p&gt;A personal portfolio styled like a terminal emulator. Features include a blinking cursor, ASCII art logos, command-style navigation, and a retro color palette.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Minimal CSS Framework</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/projects/minimal-css/" type="text/html"/>
+    <published>2026-02-10T00:00:00+00:00</published>
+    <updated>2026-02-10T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/projects/minimal-css/</id>
+    
+    <summary>A lightweight classless CSS framework</summary>
+    
+    <content type="html">&lt;p&gt;A classless CSS framework that styles semantic HTML out of the box. Under 10KB minified, with dark mode support and responsive typography.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+</feed>

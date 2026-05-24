@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Kaonashi Theme Demo</title>
+  <subtitle>A demo site for the Kaonashi Zola theme</subtitle>
+  <link href="https://fer.github.io/zola-theme-kaonashi/tags/tutorial/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://fer.github.io/zola-theme-kaonashi"/>
+  <updated>2026-05-03T00:00:00+00:00</updated>
+  <id>https://fer.github.io/zola-theme-kaonashi</id>
+  
+  <author>
+    <name>fer</name>
+  </author>
+  
+  
+  <entry>
+    <title>Getting Started with Zola</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/posts/getting-started/" type="text/html"/>
+    <published>2026-05-03T00:00:00+00:00</published>
+    <updated>2026-05-03T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/posts/getting-started/</id>
+    
+    <summary>How to set up a static site with Zola and the Kaonashi theme</summary>
+    
+    <content type="html">&lt;p&gt;&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt; is a fast static site generator written in Rust. This guide walks through setting up a site with the Kaonashi theme.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; submodule add https:&#x2F;&#x2F;github.com&#x2F;fer&#x2F;zola-theme-kaonashi themes&#x2F;zola-theme-kaonashi&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then add to your &lt;code&gt;zola.toml&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;theme&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;zola-theme-kaonashi&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;compile_sass&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; true&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;adding-content&quot;&gt;Adding content&lt;&#x2F;h2&gt;
+&lt;p&gt;Create pages and sections under &lt;code&gt;content&#x2F;&lt;&#x2F;code&gt;. See the &lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fer&#x2F;zola-theme-kaonashi&quot;&gt;theme documentation&lt;&#x2F;a&gt; for the recommended content structure.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;building&quot;&gt;Building&lt;&#x2F;h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; build&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;   # outputs to public&#x2F;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; serve&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;font-style: italic;&quot;&gt;   # local dev server with live reload&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Kaonashi Theme Demo</title>
+  <subtitle>A demo site for the Kaonashi Zola theme</subtitle>
+  <link href="https://fer.github.io/zola-theme-kaonashi/tags/guide/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://fer.github.io/zola-theme-kaonashi"/>
+  <updated>2026-05-05T00:00:00+00:00</updated>
+  <id>https://fer.github.io/zola-theme-kaonashi</id>
+  
+  <author>
+    <name>fer</name>
+  </author>
+  
+  
+  <entry>
+    <title>Customizing Your Theme</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/posts/customizing/" type="text/html"/>
+    <published>2026-05-05T00:00:00+00:00</published>
+    <updated>2026-05-05T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/posts/customizing/</id>
+    
+    <summary>Theme variables, shortcodes, and configuration options</summary>
+    
+    <content type="html">&lt;p&gt;Kaonashi is designed to be customized without touching SCSS. All theme variables can be overridden in your &lt;code&gt;zola.toml&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;theme-variables&quot;&gt;Theme variables&lt;&#x2F;h2&gt;
+&lt;div data-highlight=&quot;5-10&quot;&gt;&lt;&#x2F;div&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;toml&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;[&lt;&#x2F;span&gt;&lt;span&gt;extra.theme&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;body_bg_dark&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;#0f1214&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;body_color_dark&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;#e6e2d6&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;color_border_dark&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;#333&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;body_font_family&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;monospace, &amp;#39;Courier New&amp;#39;, Courier&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;site_max_width&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;900px&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;border_thickness&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt; =&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt; &amp;quot;0.125rem&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;code-highlighting&quot;&gt;Code highlighting&lt;&#x2F;h3&gt;
+&lt;p&gt;Line highlighting uses a &lt;code&gt;&amp;lt;div data-highlight&amp;gt;&lt;&#x2F;code&gt; marker before any fenced code block:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;html&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F9E2AF;&quot;&gt; data-highlight&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;2,4-6&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color: #94E2D5;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;div data-highlight=&quot;1,3&quot;&gt;&lt;&#x2F;div&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #CDD6F4; background-color: #1E1E2E;&quot;&gt;&lt;code data-lang=&quot;python&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;def&lt;&#x2F;span&gt;&lt;span style=&quot;color: #89B4FA;font-style: italic;&quot;&gt; greet&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #EBA0AC;font-style: italic;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;):&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FAB387;font-style: italic;&quot;&gt;    print&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;font-style: italic;&quot;&gt;f&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;&amp;quot;Hello, &lt;&#x2F;span&gt;&lt;span style=&quot;color: #F5C2E7;&quot;&gt;{&lt;&#x2F;span&gt;&lt;span&gt;name&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F5C2E7;&quot;&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color: #A6E3A1;&quot;&gt;!&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color: #9399B2;&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #CBA6F7;&quot;&gt;    return&lt;&#x2F;span&gt;&lt;span style=&quot;color: #FAB387;&quot;&gt; True&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h2 id=&quot;using-shortcodes&quot;&gt;Using shortcodes&lt;&#x2F;h2&gt;
+&lt;p&gt;Kaonashi bundles shortcodes for YouTube embeds, images with captions, collapsible details, and more. Check the README for the full reference.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+</feed>

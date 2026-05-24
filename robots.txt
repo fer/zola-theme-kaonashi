@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fer.github.io/zola-theme-kaonashi/sitemap.xml

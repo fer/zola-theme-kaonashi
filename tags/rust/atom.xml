@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Kaonashi Theme Demo</title>
+  <subtitle>A demo site for the Kaonashi Zola theme</subtitle>
+  <link href="https://fer.github.io/zola-theme-kaonashi/tags/rust/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://fer.github.io/zola-theme-kaonashi"/>
+  <updated>2026-05-01T00:00:00+00:00</updated>
+  <id>https://fer.github.io/zola-theme-kaonashi</id>
+  
+  <author>
+    <name>fer</name>
+  </author>
+  
+  
+  <entry>
+    <title>Kaonashi Zola Theme</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/projects/kaonashi-theme/" type="text/html"/>
+    <published>2026-05-01T00:00:00+00:00</published>
+    <updated>2026-05-01T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/projects/kaonashi-theme/</id>
+    
+    <summary>A minimalist Zola theme with terminal aesthetic</summary>
+    
+    <content type="html">&lt;p&gt;This very theme! A minimalist Zola theme with dark&#x2F;light mode, monospace typography, and responsive card grids.&lt;&#x2F;p&gt;
+&lt;p&gt;Features include client-side search, tag taxonomies, code syntax highlighting with line numbers, and bundled shortcodes for rich content.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Rust CLI Tool</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/projects/rust-cli-tool/" type="text/html"/>
+    <published>2026-04-15T00:00:00+00:00</published>
+    <updated>2026-04-15T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/projects/rust-cli-tool/</id>
+    
+    <summary>A command-line utility written in Rust</summary>
+    
+    <content type="html">&lt;p&gt;A command-line tool built with Rust and clap for argument parsing. Features subcommands, colored output, and config file support.&lt;&#x2F;p&gt;
+&lt;p&gt;Built with the Rust edition 2024, targeting &lt;strong&gt;≥ 1.85&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>The Rust Programming Language</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/bookshelf/the-rust-book/" type="text/html"/>
+    <published>2026-04-01T00:00:00+00:00</published>
+    <updated>2026-04-01T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/bookshelf/the-rust-book/</id>
+    
+    <summary>The official guide to Rust</summary>
+    
+    <content type="html">&lt;p&gt;&lt;em&gt;The Rust Programming Language&lt;&#x2F;em&gt; (commonly known as &quot;The Rust Book&quot;) is the definitive guide to learning Rust, authored by Steve Klabnik and Carol Nichols. It is the official, community-maintained resource for the Rust language and is available for free online.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-it-covers&quot;&gt;What it covers&lt;&#x2F;h2&gt;
+&lt;p&gt;The book is structured as a gradual journey. It starts with basic Rust syntax — variables, functions, control flow — and builds upward through the language&#x27;s defining features.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;ownership-and-borrowing&quot;&gt;Ownership and Borrowing&lt;&#x2F;h3&gt;
+&lt;p&gt;Rust&#x27;s ownership system is its most distinctive feature. The book devotes several chapters to explaining how ownership works, how borrowing and references relate to it, and how the compiler enforces these rules at compile time. This is the foundation upon which Rust&#x27;s memory safety guarantees are built.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;lifetimes&quot;&gt;Lifetimes&lt;&#x2F;h3&gt;
+&lt;p&gt;Lifetimes are Rust&#x27;s way of ensuring that references are always valid. The book explains lifetime annotations, elision rules, and how lifetimes relate to the borrow checker through concrete examples.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;structs-enums-and-pattern-matching&quot;&gt;Structs, Enums, and Pattern Matching&lt;&#x2F;h3&gt;
+&lt;p&gt;These chapters cover Rust&#x27;s type system — defining custom types with &lt;code&gt;struct&lt;&#x2F;code&gt; and &lt;code&gt;enum&lt;&#x2F;code&gt;, and extracting data with &lt;code&gt;match&lt;&#x2F;code&gt; and &lt;code&gt;if let&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;collections-and-error-handling&quot;&gt;Collections and Error Handling&lt;&#x2F;h3&gt;
+&lt;p&gt;Standard library collections like &lt;code&gt;Vec&lt;&#x2F;code&gt;, &lt;code&gt;String&lt;&#x2F;code&gt;, and &lt;code&gt;HashMap&lt;&#x2F;code&gt; are covered alongside Rust&#x27;s error-handling model using &lt;code&gt;Result&lt;&#x2F;code&gt;, &lt;code&gt;Option&lt;&#x2F;code&gt;, &lt;code&gt;panic!&lt;&#x2F;code&gt;, and the &lt;code&gt;?&lt;&#x2F;code&gt; operator.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;generics-traits-and-lifetimes-the-trifecta&quot;&gt;Generics, Traits, and Lifetimes — the Trifecta&lt;&#x2F;h3&gt;
+&lt;p&gt;A key chapter brings together generics, trait bounds, and lifetimes to show how they compose into reusable, type-safe abstractions.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;testing-i-o-and-cli-projects&quot;&gt;Testing, I&#x2F;O, and CLI Projects&lt;&#x2F;h3&gt;
+&lt;p&gt;The second half of the book shifts toward application-level programming: writing tests, working with files and the filesystem, and building a command-line tool as a capstone project.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;concurrency&quot;&gt;Concurrency&lt;&#x2F;h3&gt;
+&lt;p&gt;Rust&#x27;s fearless concurrency model — threads, message passing with channels, shared state with &lt;code&gt;Arc&amp;lt;Mutex&amp;lt;T&amp;gt;&amp;gt;&lt;&#x2F;code&gt;, and the &lt;code&gt;Send&lt;&#x2F;code&gt; and &lt;code&gt;Sync&lt;&#x2F;code&gt; traits — receives thorough treatment.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;unsafe-rust&quot;&gt;Unsafe Rust&lt;&#x2F;h3&gt;
+&lt;p&gt;The final chapters cover unsafe code: raw pointers, calling foreign functions through FFI, and the cases where you need to opt out of Rust&#x27;s safety guarantees.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-it-matters&quot;&gt;Why it matters&lt;&#x2F;h2&gt;
+&lt;p&gt;The Rust Book is not just a language tutorial — it is a model of how technical documentation should be written. Each concept is introduced with a motivating problem, explained with runnable examples, and followed by exercises that reinforce the material. The result is a book that works equally well as a structured course for beginners and as a reference for experienced developers coming from C++, Go, or other systems languages.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Rust Atomics and Locks</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/bookshelf/rust-atomics-and-locks/" type="text/html"/>
+    <published>2026-03-01T00:00:00+00:00</published>
+    <updated>2026-03-01T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/bookshelf/rust-atomics-and-locks/</id>
+    
+    <summary>Concurrency in Rust from first principles — memory ordering, atomics, and lock implementation</summary>
+    
+    <content type="html">&lt;p&gt;&lt;em&gt;Rust Atomics and Locks&lt;&#x2F;em&gt; by Mara Bos is a deep, practical guide to concurrent programming in Rust. Mara is the Rust standard library&#x27;s concurrency maintainer, and this book reflects that depth of expertise.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-it-covers&quot;&gt;What it covers&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;memory-ordering&quot;&gt;Memory Ordering&lt;&#x2F;h3&gt;
+&lt;p&gt;The book starts at the hardware level — what memory ordering means on modern CPUs, how compilers can reorder operations, and how Rust&#x27;s memory ordering types (&lt;code&gt;Relaxed&lt;&#x2F;code&gt;, &lt;code&gt;Acquire&lt;&#x2F;code&gt;, &lt;code&gt;Release&lt;&#x2F;code&gt;, &lt;code&gt;AcqRel&lt;&#x2F;code&gt;, &lt;code&gt;SeqCst&lt;&#x2F;code&gt;) map to processor-level guarantees.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;atomic-types&quot;&gt;Atomic Types&lt;&#x2F;h3&gt;
+&lt;p&gt;A thorough treatment of &lt;code&gt;AtomicBool&lt;&#x2F;code&gt;, &lt;code&gt;AtomicI32&lt;&#x2F;code&gt;, &lt;code&gt;AtomicUsize&lt;&#x2F;code&gt;, &lt;code&gt;AtomicPtr&lt;&#x2F;code&gt;, and the newer &lt;code&gt;AtomicU64&lt;&#x2F;code&gt; and friends. Each type is examined with practical examples showing when to use which atomic operation.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;building-locks-from-atomics&quot;&gt;Building Locks from Atomics&lt;&#x2F;h3&gt;
+&lt;p&gt;The book walks through implementing every major lock primitive from scratch: &lt;code&gt;Mutex&lt;&#x2F;code&gt;, &lt;code&gt;RwLock&lt;&#x2F;code&gt;, &lt;code&gt;Condvar&lt;&#x2F;code&gt;, and once-cells. Each implementation reveals the tradeoffs between fairness, throughput, and memory overhead.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;lock-free-data-structures&quot;&gt;Lock-Free Data Structures&lt;&#x2F;h3&gt;
+&lt;p&gt;Beyond locks, the book covers lock-free stacks, queues, and hazard pointers — data structures that avoid blocking entirely by using careful atomic operations.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-c-20-memory-model&quot;&gt;The C++20 Memory Model&lt;&#x2F;h3&gt;
+&lt;p&gt;Rust&#x27;s memory model is inherited from C++20. The book explains the formal model behind it, how &lt;code&gt;Ordering&lt;&#x2F;code&gt; relates to happens-before relationships, and how to reason about correctness in concurrent code.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-it-matters&quot;&gt;Why it matters&lt;&#x2F;h2&gt;
+&lt;p&gt;This is the definitive resource on Rust concurrency. Mara Bos&#x27;s experience as the standard library&#x27;s concurrency maintainer means every page is grounded in real implementation decisions. The book is available for free online and is equally valuable as a cover-to-cover read and as a reference for specific topics.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+</feed>

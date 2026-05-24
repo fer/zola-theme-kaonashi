@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Kaonashi Theme Demo</title>
+  <subtitle>A demo site for the Kaonashi Zola theme</subtitle>
+  <link href="https://fer.github.io/zola-theme-kaonashi/tags/systems/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://fer.github.io/zola-theme-kaonashi"/>
+  <updated>2026-03-01T00:00:00+00:00</updated>
+  <id>https://fer.github.io/zola-theme-kaonashi</id>
+  
+  <author>
+    <name>fer</name>
+  </author>
+  
+  
+  <entry>
+    <title>Rust Atomics and Locks</title>
+    <link href="https://fer.github.io/zola-theme-kaonashi/bookshelf/rust-atomics-and-locks/" type="text/html"/>
+    <published>2026-03-01T00:00:00+00:00</published>
+    <updated>2026-03-01T00:00:00+00:00</updated>
+    <id>https://fer.github.io/zola-theme-kaonashi/bookshelf/rust-atomics-and-locks/</id>
+    
+    <summary>Concurrency in Rust from first principles — memory ordering, atomics, and lock implementation</summary>
+    
+    <content type="html">&lt;p&gt;&lt;em&gt;Rust Atomics and Locks&lt;&#x2F;em&gt; by Mara Bos is a deep, practical guide to concurrent programming in Rust. Mara is the Rust standard library&#x27;s concurrency maintainer, and this book reflects that depth of expertise.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-it-covers&quot;&gt;What it covers&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;memory-ordering&quot;&gt;Memory Ordering&lt;&#x2F;h3&gt;
+&lt;p&gt;The book starts at the hardware level — what memory ordering means on modern CPUs, how compilers can reorder operations, and how Rust&#x27;s memory ordering types (&lt;code&gt;Relaxed&lt;&#x2F;code&gt;, &lt;code&gt;Acquire&lt;&#x2F;code&gt;, &lt;code&gt;Release&lt;&#x2F;code&gt;, &lt;code&gt;AcqRel&lt;&#x2F;code&gt;, &lt;code&gt;SeqCst&lt;&#x2F;code&gt;) map to processor-level guarantees.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;atomic-types&quot;&gt;Atomic Types&lt;&#x2F;h3&gt;
+&lt;p&gt;A thorough treatment of &lt;code&gt;AtomicBool&lt;&#x2F;code&gt;, &lt;code&gt;AtomicI32&lt;&#x2F;code&gt;, &lt;code&gt;AtomicUsize&lt;&#x2F;code&gt;, &lt;code&gt;AtomicPtr&lt;&#x2F;code&gt;, and the newer &lt;code&gt;AtomicU64&lt;&#x2F;code&gt; and friends. Each type is examined with practical examples showing when to use which atomic operation.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;building-locks-from-atomics&quot;&gt;Building Locks from Atomics&lt;&#x2F;h3&gt;
+&lt;p&gt;The book walks through implementing every major lock primitive from scratch: &lt;code&gt;Mutex&lt;&#x2F;code&gt;, &lt;code&gt;RwLock&lt;&#x2F;code&gt;, &lt;code&gt;Condvar&lt;&#x2F;code&gt;, and once-cells. Each implementation reveals the tradeoffs between fairness, throughput, and memory overhead.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;lock-free-data-structures&quot;&gt;Lock-Free Data Structures&lt;&#x2F;h3&gt;
+&lt;p&gt;Beyond locks, the book covers lock-free stacks, queues, and hazard pointers — data structures that avoid blocking entirely by using careful atomic operations.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-c-20-memory-model&quot;&gt;The C++20 Memory Model&lt;&#x2F;h3&gt;
+&lt;p&gt;Rust&#x27;s memory model is inherited from C++20. The book explains the formal model behind it, how &lt;code&gt;Ordering&lt;&#x2F;code&gt; relates to happens-before relationships, and how to reason about correctness in concurrent code.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-it-matters&quot;&gt;Why it matters&lt;&#x2F;h2&gt;
+&lt;p&gt;This is the definitive resource on Rust concurrency. Mara Bos&#x27;s experience as the standard library&#x27;s concurrency maintainer means every page is grounded in real implementation decisions. The book is available for free online and is equally valuable as a cover-to-cover read and as a reference for specific topics.&lt;&#x2F;p&gt;
+</content>
+  </entry>
+  
+</feed>
